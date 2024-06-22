@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff4d4d; /* Set the entire background to red */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white; /* Container background to white for contrast */
+    color: red;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px; /* Increased max-width for better layout */
+    overflow-y: auto; /* Allow scrolling for overflow content */
+    max-height: 90vh; /* Restrict the maximum height to ensure visibility */
+    animation: containerSlideIn 1s ease-out;
+}
+
+@keyframes containerSlideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: headerFadeIn 2s ease-in-out;
+}
+
+@keyframes headerFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.logo {
+    font-size: 2rem;
+    background-color: white;
+    color: red;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 15px;
+    animation: logoBounce 2s infinite;
+}
+
+@keyframes logoBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    animation: textFadeIn 3s ease-in-out;
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.intro {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    animation: introSlideIn 2s ease-out;
+}
+
+@keyframes introSlideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.intro p {
+    margin: 0 0 10px;
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.category-card {
+    background-color: #ffcccc;
+    color: red;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px; /* Fixed width for category cards */
+    margin: 10px; /* Increased margin for better spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    flex-shrink: 0;
+    animation: categoryFadeIn 1s ease-in-out, categorySlideIn 0.5s ease-out;
+}
+
+@keyframes categoryFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes categorySlideIn {
+    from { transform: translateX(-20px); }
+    to { transform: translateX(0); }
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    background-color: #ff9999; /* Slightly darker shade of red on hover */
+}
+
+.doctor-card {
+    background-color: white;
+    color: red;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: doctorCardFadeIn 1.5s ease-in-out;
+}
+
+@keyframes doctorCardFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.doctor-card:hover {
+    transform: scale(1.05);
+}
+
+.doctor-image {
+    height: 60px;
+    border-radius: 50%;
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    color: red;
+    background-color: #ffcccc;
+    padding: 10px;
+    border-radius: 10px;
+    animation: footerSlideIn 2s ease-out;
+}
+
+@keyframes footerSlideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
